@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<body>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <p id="display">0</p>
+</body>
+<script>
+    let count = parseInt(document.getElementById("display").innerText);
+    
+    function increase(){
+        if(count < 10){
+            count++;
+            document.getElementById("display").innerText = count;
+        }
+    }
+
+    function decrease(){
+        if(count > 0){
+            count--;
+            document.getElementById("display").innerText = count;
+        }
+    }
+</script>
+</html>
